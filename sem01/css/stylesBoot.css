@@ -1,0 +1,25 @@
+/* Importando estilos de bootstrap */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* Layout */
+:root{
+    --primary-color : blue;
+    --secondary-color : green;
+    --text-color: white;
+    
+}
+body * {
+    color: var(--text-color);
+}
+ .container div > [class="col"] {
+     /* Guias visuales */
+    margin:1px;
+    border: 1px dotted white;
+}
+
+.bg-primary{
+    background-color: var(--primary-color);
+}
+.bg-secondary{
+    background-color: var(--secondary-color);
+}
