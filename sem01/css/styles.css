@@ -1,0 +1,35 @@
+/* Colores base */
+/* :root{
+    --main-bg-color: red;
+    --secondary-bg-color: blue;
+    --tertiary-bg-color: brown;
+}
+.rojo{
+    color:var(--main-bg-color);
+}
+
+.azul{
+    color:var(--secondary-bg-color);
+}
+.marron{
+    color: var(--tertiary-bg-color);
+}
+ */
+
+
+.rojo{
+    color: red;
+}
+
+.azul{
+    color: blue;
+}
+.marron{
+    color: brown;
+}
+#verde{
+    color: green;
+}
+p{
+    color: purple
+}

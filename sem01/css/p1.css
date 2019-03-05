@@ -1,0 +1,23 @@
+ul{
+    padding:0;
+    
+}
+li{
+    list-style: none;   
+    color: red;        
+}
+.red{
+    color: red;
+}
+ul.verde li{
+    color: green
+}
+.pink{
+    color: pink
+}
+.default{
+    color: black
+}
+.blue{
+    color: blue;
+}
