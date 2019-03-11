@@ -14,7 +14,7 @@ body * {
  .container div > [class="col"] {
      /* Guias visuales */
     margin:1px;
-    border: 1px dotted rgba(245, 245, 245, 0.22);
+    border: 1px dotted white;
 }
 
 .bg-primary{
