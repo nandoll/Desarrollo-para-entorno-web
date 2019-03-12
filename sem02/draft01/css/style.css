@@ -1,0 +1,19 @@
+header.masthead, .nomargin{
+    padding:0;
+    margin:0;
+}
+header.masthead{
+    padding-top: calc(6rem + 65px);
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        padding-top: calc(6rem + 42px);
+    }
+}
+
+@media (min-width: 576px) {
+    header.masthead {
+        padding-top: calc(6rem + 26px);
+    }
+}
