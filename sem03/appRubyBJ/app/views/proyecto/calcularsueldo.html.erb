@@ -1,0 +1,140 @@
+<%= javascript_include_tag 'calcularsueldo', 'data-turbolinks-track': 'reload' %>
+
+<div class="row">
+    <div class="col mt-3">
+        <h1>Cálculo de Sueldo Neto</h1>
+        <hr>
+        <form class="needs-validation" novalidate>
+            <div class="form-row mb-3">
+                <!-- Select-->
+                <div class="col text-md-right">
+                    <label>Tipo de operación</label>
+                </div>
+                <div class="col">
+                    <select class="form-control tipo_trabajador" required>
+                        <option value="">Seleccione tipo de trabajador</option>
+                        <option value=" 100 ">Planilla</option>
+                        <option value=" 80 ">Contratado</option>                        
+                    </select>     
+                    <span class="invalid-feedback">Debe elegir el tipo de trabajador</span>       
+                </div>
+                <!-- / Select-->
+            </div>
+            
+            <!-- Operación horas-->
+            <div class="form-row mb-3">
+                <div class="col text-md-right">
+                    <label> Horas trabajadas</label>
+                </div>
+                <div class="col">
+                    <input class="form-control horas" type="text" placeholder="Ingrese valor" required>
+                    <span class="invalid-feedback">Debe ingresar las horas trabajadas</span>
+                </div>
+            </div>
+            <!-- / Operación -->
+
+            <!-- Operación hijos -->
+            <div class="form-row mb-3">
+                <div class="col text-md-right">
+                    <label> Hijos </label>
+                    
+                </div>
+                <div class="col">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" value=" 100 " id="customControlValidation2" name="cantidadHijos" required>
+                      <label class="custom-control-label" for="customControlValidation2">1</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" value=" 200 " id="customControlValidation3" name="cantidadHijos" required>
+                      <label class="custom-control-label" for="customControlValidation3">2</label>                      
+                    </div>
+                    <div class="custom-control custom-radio mb-3">
+                      <input type="radio" class="custom-control-input" value=" 300 " id="customControlValidation4" name="cantidadHijos" required>
+                      <label class="custom-control-label" for="customControlValidation4">Más de 2</label>
+                      <div class="invalid-feedback">Seleccionar la cantidad de hijos</div>
+                    </div>
+                </div>
+            </div>
+            <!-- / Operación -->
+
+            <!-- Operación Calculo del sueldo -->
+            <div class="form-row mb-3">
+                <div class="col text-md-right">
+                    <label> Sueldo Bruto</label>
+                </div>
+                <div class="col">
+                    <input class="form-control sueldo_bruto" type="text" placeholder="Sueldo bruto" disabled>
+                    
+                </div>
+            </div>
+            <!-- / Operación -->
+
+            <!-- Operación  de impuesto-->
+            <div class="form-row mb-3">
+                <div class="col text-md-right">
+                    <label> Impuesto (18% del sueldo bruto)</label>
+                </div>
+                <div class="col">
+                    <input class="form-control impuesto" type="text" placeholder="Impuestos 18%" disabled>
+                      
+                </div>
+            </div>
+            <!-- / Operación -->
+
+            <!-- Operación  de impuesto-->
+            <div class="form-row mb-3">
+                <div class="col text-md-right">
+                    <label> Bono por hijo</label>
+                </div>
+                <div class="col">
+                    <input class="form-control bono_hijo" type="text" placeholder="Bonos" disabled>                    
+                </div>
+            </div>
+            <!-- / Operación -->
+
+            <!-- Operación  de impuesto-->
+            <div class="form-row mb-3">
+                <div class="col text-md-right">
+                    <label> Sueldo Neto</label>
+                </div>
+                <div class="col">
+                    <input class="form-control sueldo_neto" type="text" placeholder="Bonos" disabled>
+                </div>
+            </div>
+            <!-- / Operación -->
+
+
+            <div class="form-row mb-3">
+                <div class="col text-center">
+                <button type="button" class="btn btn-secondary">Limpiar form</button>
+                <button type="submit" class="btn btn-success">Calcular</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Button trigger modal 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="modalResultado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Resultado de operación</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">        
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
