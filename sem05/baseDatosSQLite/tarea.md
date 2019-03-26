@@ -1,0 +1,25 @@
+#CREAR BD DATOS
+
+sqlite datos.sqlite3
+sqlite> CREATE TABLE datos(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    codigo VARCHAR(8) NOT NULL,
+    nomnbre VARCHAR(20) NOT NULL,
+    edad INTEGER NOT NULL   
+);
+INSERT INTO datos VALUES(NULL, '07542198', 'Fernando', 30 );
+INSERT INTO datos VALUES(NULL, '78541278', 'Javier',  31 );
+INSERT INTO datos VALUES(NULL, '98765412', 'Sergio', 32 );
+
+#CREAR BD CURSOS
+sqlite datos.sqlite3
+sqlite> CREATE TABLE cursos(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    codigo VARCHAR(8) NOT NULL,
+    nombre VARCHAR(20) NOT NULL,
+    ciclo VARCHAR(8) NOT NULL
+    
+);
+INSERT INTO cursos VALUES(NULL, '07542198', 'Luis', '2018_1' );
+INSERT INTO cursos VALUES(NULL, '78541278', 'Miguel',  '2019_1' );
+INSERT INTO cursos VALUES(NULL, '98765412', 'Andres', '2018_2' );
